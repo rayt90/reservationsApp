@@ -5,52 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservations App</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <body>
     <header>
       <img id="logo" src="img/booking.svg" alt="reservations logo" />
-      <h1>Reservations</h1>
+      <h1>My Reservations</h1>
     </header>
 
-    <section>
+    <section class="form-container">
       <header>
-        <h3>Reservations</h3>
+        <h3>Please complete to make a booking:</h3>
       </header>
 
-      <form class="res-form">
-        <label
-          >First Name:<input
-            type="text"
-            name="first-name"
-            placeholder="e.g. John"
-        /></label>
-        <label
-          >Surname:<input type="text" name="last-name" placeholder="e.g. Smith"
-        /></label>
-        <label
-          >Contact Number:<input name="contact" placeholder="040 123 4567"
-        /></label>
-        <label
-          >Email Address:
-          <input name="email" type="email" placeholder="jognsmith@gmail.com"
-        /></label>
-        <label>Time of booking:
-        <input name="time" type="time"></label>
-        <label>Number of people:<input name="people" type="number" value="0"></label>
-        <label>Number of highchairs:<select name="highchairs">
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>\</select></label>
-                  <label>Number of prams:<select name="prams">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>\</select></label>
-        <label for="info">Additional information:</label>
-        <textarea name="additional" id="info" rows="1" cols="12"></textarea>
+      <form>
+        <ul class="res-form">
+          <li>
+            <label for="first-name">First Name:</label
+            ><input
+              id="first-name"
+              type="text"
+              name="first-name"
+              placeholder="e.g. John"
+            />
+          </li>
+          <li>
+            <label for="surname">Surname:</label
+            ><input
+              id="surname"
+              type="text"
+              name="last-name"
+              placeholder="e.g. Smith"
+            />
+          </li>
+          <li>
+            <label for="contact">Contact Number:</label
+            ><input
+              id="contact"
+              name="contact"
+              type="text"
+              placeholder="040 123 4567"
+            />
+          </li>
+          <li>
+            <label for="email">Email Address: </label
+            ><input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="johnsmith@gmail.com"
+            />
+          </li>
+          <li>
+            <label for="time">Time of booking: </label
+            ><input id="time" name="time" type="time" />
+          </li>
+          <li>
+            <label for="people">Number of people:</label
+            ><input id="people" name="people" type="number" value="0" />
+          </li>
+          <li>
+            <label>Number of highchairs:</label
+            ><select name="highchairs">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option
+              >\</select
+            >
+          </li>
+          <li>
+            <label>Number of prams:</label
+            ><select name="prams">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option
+              >\</select
+            >
+          </li>
+          <li>
+            <label for="info">Additional information:</label>
+
+            <textarea name="additional" id="info" rows="5"></textarea>
+          </li>
+          <li>
+            <button id="submit-button" type="submit" name="submit-button">
+              Submit
+            </button>
+          </li>
+        </ul>
       </form>
     </section>
   </body>
